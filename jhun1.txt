@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Carry
+ */
+public class Asterisk {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
+        //Scanner to be able the user input a value
+        Scanner sc = new Scanner(System.in);
+        int s = sc.nextInt();
+        //calling the method "displayAsterisk"
+        displayAsterisk(s);
+    }
+    //this method "displayAterisk" having 1 int parameteris, use to display asterisk.
+    public static void displayAsterisk(int s){
+        //loop for entire first triangle
+        for (int i = s; i > 0; i--) { 
+           //loop to display the space " " in the first triangle.
+            for (int j = 1; j <= s - i; j++) {
+                System.out.print(" ");
+
+            }
+            //loop to display the asterisk for the first triangle.
+            for (int k = 1; k <= i ; k++) {
+             
+                if (k==1 && i==1) {
+                       System.out.print(s+" ");
+                }else{
+                    System.out.print("* ");  
+                
+            }
+            }
+            System.out.println("");
+
+        } 
+         //loop for entire second triangle
+        for (int i = 1; i <= s; i++) {
+          //loop to display the space " " for the second triangle.
+            for (int j = 1; j <= s - i; j++) {
+                System.out.print(" ");
+
+            }
+            //loop to display the asterisk for the first triangle.
+            for (int b = 1; b <= i; b++) {
+                if (b==1 && i==1) {
+                System.out.print(s+" ");
+                }else{
+                     System.out.print("* ");
+                }
+            }
+            System.out.println("");
+         }
+    }
+    }
